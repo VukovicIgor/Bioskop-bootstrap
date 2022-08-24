@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/cef3d760f2.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="stilovi/stil.css">
+    <title>ShineMovie - kontakt</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light">
+      <button class="navbar-toggler ms-2 " type="button" data-bs-toggle="collapse" data-bs-target="#collNav">
+          <span><i class="fas fa-bars" id="navDugme"></i></span>
+      </button>
+      <div class="collapse navbar-collapse ms-2" id="collNav">
+          <ul class="navbar-nav">
+              <li class="nav-item active">
+                  <a class="navbar-brand nav-link" href="index.html" id="logo">ShineMovie</a>  
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html" id="elNav">Početna</a>  
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="repertoar.html" id="elNav">Repertoar</a>  
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Novosti.html" id="elNav">Novosti</a>  
+              </li>
+              <li class="nav-item" id="active">
+                  <a class="nav-link" href="kontakt.html" id="elNav">Kontakt</a>  
+              </li>
+          </ul>
+      </div>
+  </nav>
+    <hr size="4">
+    <br>
+  <div class="container">
+    <div class="row pt-3" id="kontakt">
+      <h1>
+        Kontakt
+      </h1>
+      <hr size="4">
+        <div class="col-6">
+            <form id="forma">
+                <div class="form-group mt-2">
+                    <label for="Ime i prezime"><i class="fas fa-user"> Ime i prezime</i></label>
+                    <input type="text" class="col-md-12" id="imeIprezime" placeholder="Unesite Vaše ime i prezime">
+                </div>
+                <div class="form-group mt-2">
+                  <label for="Email"><i class="fas fa-at"> Email address</i></label>
+                  <input type="email"  class="col-md-12" id="email" placeholder="Unesite Vaš e-mail">
+                </div>
+                <div class="form-group mt-2">
+                  <label for="Grad"><i class="fas fa-city"> Grad</i></label>
+                  <input type="text"  class="col-md-12" id="grad" placeholder="Unesite Vaš grad">
+                </div>
+        </div>
+        <div class="col-6">
+          <ul class="list-unstyled">
+            <div class="form-group mt-2">
+              <label for="Telefon"><i class="fas fa-phone"> Telefon</i></label>
+              <input type="tel" class="col-md-12" pattern="[0-9]{10}"id="telefon" placeholder="061-12/345-67">
+            </div>
+            <div class="form-group mt-2">
+              <label for="Poruka"><i class="fas fa-edit"> Poruka</i></label>
+              <textarea type="text" class="col-md-12" id="poruka" placeholder="Unesite Vašu poruku"></textarea>
+            </div>
+        </div>
+        <button type="button" class="btn btn-outline-primary pt-2 mt-4" id="dugmeposalji" onclick="Validacija()">POŠALJI</button>
+        <div class="modal fade" id="mProzor" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 style="text-align: left;">Poslato</h4>
+              </div>
+              <div class="modal-body">
+                <div class="alert alert-success">
+                  <Strong>Hvala</Strong> Vam što ste nas kontaktirali. Očekujte odgovor u naredna 24h.
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" onclick="Submit()" class="btn btn-default" data-bs-dismiss="modal" id="posalji">Zatvori<span class="badge badge-primary">!</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      </div>
+  </div>
+  <div class="container">
+    <div class="row pt-5" id="kontakt">
+      <h1>Lokacija i kontakt podaci</h1>
+      <hr size="4">
+      <div class="col-6">
+        <br>
+        <p>Galeriju postera u našim bioskopima možete pogledati <a href="galerija.html">ovde</a>. <br> Naši bioskopi se nalaze na nekoliko lokacija u Beogradu.</p>
+        <ul id="lista-kontakti">
+          <li>Bulevar Mihajla Pupina 4, Beograd 11070</li>
+          <li>Jurija Gagarina 16, Beograd 11070</li>
+        </ul>
+      </div>
+      <div class="col-6">
+        <br>
+        <p>Možete nas kontaktirati putem mejla ili telefona:</p>
+        <ul id="lista-kontakti">
+          <li><p><i class="fas fa-phone"> Telefon: </i><span class="float-right"> <a href="tel:+381-61-12-345-67" data-bs-toggle="tooltip" data-bs-placement="top" title="KLIKNITE DA POZOVETE">+381/61-1234567</a></span></p></li>
+          <li><p><i class="fas fa-at"> E-mail: </i><span class="float-right"> <a href="mailto:igornrt3619@gs.viser.edu.rs" data-bs-toggle="tooltip" data-bs-placement="top" title="KLIKNITE DA POŠALJETE MAIL">igornrt3619@gs.viser.edu.rs</a></span></p></li>
+        </ul>
+      </div>
+      </div>
+    <div class="row" id="kontakt">
+      <div class="col-md-6 col-ms-12">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.302906663916!2d20.434860615048088!3d44.815393384521094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a655bae3423a7%3A0xd9fb62470be09800!2zVcWhxIdl!5e0!3m2!1sen!2srs!4v1629727981635!5m2!1sen!2srs" 
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+      <div class="col-md-6 col-ms-12">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.793907118202!2d20.40305461504772!3d44.80538858518135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a6f8ffefc5f23%3A0xe336943db1696421!2sDelta%20City!5e0!3m2!1sen!2srs!4v1629728586245!5m2!1sen!2srs" 
+        width="100%" height="400" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+    </div>
+  </div>
+  <hr size="4">
+  <footer>   
+    <div class="container">         
+        <section>             
+            <a class="btn btn-floating" href="https://www.facebook.com/Vevericak/" role="button">                 
+                <i class="fab fa-facebook-f fa-2x"></i>             
+            </a>                    
+            <a class="btn btn-floating" href="https://twitter.com/?lang=en" role="button">                 
+                <i class="fab fa-twitter fa-2x"></i>             
+            </a>                    
+            <a class="btn btn-floating" href="https://www.instagram.com/vevericak/" role="button">                 
+                <i class="fab fa-instagram fa-2x"></i>             
+            </a>           
+        </section>         
+    </div>         
+    <div class="text-center pb-3">Igor Vuković © 2021 Copyright</div>     
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bstoggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+  });
+
+  function Validacija(){
+    var ime=$("#imeIprezime").val();
+    var email=$("#email").val();
+    var tel=$("#telefon").val();
+    var grad=$("#grad").val();
+    var poruka=$("#poruka").val();
+    var mailpat=/\S+@\S+\.\S+/;
+    var telpat=/[0]{1}[6]{1}[0-9]{8}/;
+    
+    if(ime=="" || ime==null || email=="" || email==null || tel=="" || tel==null || grad=="" || grad==null || poruka=="" || poruka==null)
+    {
+      alert("Niste popunili sva polja!");
+      return false;
+    }
+    else if(!mailpat.test(email))
+    {
+      alert("E-mail adresa nije uneta u dobrom formatu");
+      return false;
+    }
+    else if(!telpat.test(tel) || tel.toString().length>10)
+    {
+      alert("Format broja telefona nije dobar");
+      return false;
+    }
+    else
+    {
+      $('#dugmeposalji').ready(function(){
+      $('#mProzor').modal('show');
+      });
+    }
+  }
+  function Submit(){
+    $('#posalji').ready(function(){
+      $('#forma').submit();
+      });
+  }
+  </script>
+</body>
+</html>
